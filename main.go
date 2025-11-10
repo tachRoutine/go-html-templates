@@ -35,7 +35,9 @@ func main(){
             },
         }
         
-        tmpl.Execute(w,data)
+        if err:=tmpl.Execute(w,data);err!=nil{
+            fmt.Println(err)
+        }
 	})
 	fullAddr := fmt.Sprintf("http://localhost%s", port)
 	fmt.Println("server in running http", fullAddr)
