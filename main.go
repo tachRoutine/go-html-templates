@@ -12,13 +12,10 @@ type Todo struct {
     Done  bool
 }
 
-
-
 type TodoPageData struct {
     PageTitle string
     Todos     []Todo
 }
-
 
 func main(){
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
